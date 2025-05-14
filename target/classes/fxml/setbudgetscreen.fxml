@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: linear-gradient(to bottom, #4A90E2, #87CEEB);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fintrack.controllers.NewBudgetController">
+    <children>
+        <!-- Header Section -->
+        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="360.0" spacing="10.0" style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-padding: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);">
+            <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1A73E8;" text="Set Budget" />
+        </HBox>
+
+        <!-- Form Section -->
+        <VBox alignment="CENTER" layoutX="20.0" layoutY="90.0" prefHeight="290.0" prefWidth="320.0" spacing="15.0">
+            <!-- Budget Name -->
+            <TextField fx:id="budgetNameField" promptText="Budget Name" style="-fx-background-color: #FFFFFF; -fx-border-color: #1A73E8; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 5; -fx-font-size: 14px;" />
+
+            <!-- Budget Limit -->
+            <TextField fx:id="budgetLimitField" promptText="Budget Limit ($)" style="-fx-background-color: #FFFFFF; -fx-border-color: #1A73E8; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 5; -fx-font-size: 14px;" />
+
+            <!-- Add Button -->
+            <Button fx:id="addBudgetButton" onMouseClicked="#handleSetBudget" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px; -fx-border-radius: 5; -fx-background-radius: 5;" text="Set Budget" />
+        </VBox>
+
+        <!-- Back Button -->
+        <Button fx:id="btnback" layoutX="146.0" layoutY="496.0" onMouseClicked="#handleBack" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5; -fx-background-radius: 5;" text="Back">
+            <graphic>
+                <ImageView fitHeight="16.0" fitWidth="16.0">
+                    <image>
+                        <Image url="@../images/backicon.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+    </children>
+</AnchorPane>

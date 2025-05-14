@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: linear-gradient(to bottom, #1A73E8, #87CEEB);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fintrack.controllers.RegisterController">
+    <children>
+        <VBox alignment="CENTER" layoutX="40.0" layoutY="60.0" prefHeight="520.0" prefWidth="280.0" spacing="15.0">
+            <children>
+                <!-- Logo -->
+                <ImageView fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logo.png" />
+                    </image>
+                </ImageView>
+
+                <!-- Title -->
+                <Text style="-fx-font-size: 18; -fx-font-weight: bold; -fx-fill: white;" text="Create an Account" />
+
+                <!-- Full Name -->
+                <TextField fx:id="usernameField" promptText="Full Name" style="-fx-background-color: #FFFFFF; -fx-border-color: #1A73E8; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 5; -fx-font-size: 14px;" />
+
+                <!-- Email -->
+                <TextField fx:id="emailField" promptText="Email" style="-fx-background-color: #FFFFFF; -fx-border-color: #1A73E8; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 5; -fx-font-size: 14px;" />
+
+                <!-- Birthday -->
+                <DatePicker fx:id="birthdatePicker" promptText="Birthday" style="-fx-background-color: #FFFFFF; -fx-border-color: #1A73E8; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 5; -fx-font-size: 14px;" />
+
+                <!-- Password -->
+                <PasswordField fx:id="passwordField" promptText="Password" style="-fx-background-color: #FFFFFF; -fx-border-color: #1A73E8; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 5; -fx-font-size: 14px;" />
+
+                <!-- Re-enter Password -->
+                <PasswordField fx:id="confirmPasswordField" promptText="Re-enter Password" style="-fx-background-color: #FFFFFF; -fx-border-color: #1A73E8; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 5; -fx-font-size: 14px;" />
+
+                <!-- Register Button -->
+                <Button fx:id="handleRegisterbtn" onAction="#handleRegister" prefWidth="200.0" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-font-size: 16px; -fx-border-radius: 5; -fx-background-radius: 5;" text="Register" />
+
+                <!-- Log In Link -->
+                <Text onMouseClicked="#goBackToLogin" style="-fx-font-size: 14; -fx-fill: white; -fx-underline: true;" text="Already have an account? Log in" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
